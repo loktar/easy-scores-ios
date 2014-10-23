@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010ED3BD9FD233F830CFAF34 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB98725772FAB10CAFCBBC /* libPods.a */; };
 		3C4BD90D19F9B77700F2EB8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BD90C19F9B77700F2EB8A /* AppDelegate.swift */; };
-		3C4BD90F19F9B77700F2EB8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BD90E19F9B77700F2EB8A /* ViewController.swift */; };
+		3C4BD90F19F9B77700F2EB8A /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BD90E19F9B77700F2EB8A /* ScoresViewController.swift */; };
 		3C4BD91219F9B77700F2EB8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C4BD91019F9B77700F2EB8A /* Main.storyboard */; };
 		3C4BD91419F9B77700F2EB8A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C4BD91319F9B77700F2EB8A /* Images.xcassets */; };
 		3C4BD91719F9B77700F2EB8A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4BD91519F9B77700F2EB8A /* LaunchScreen.xib */; };
 		3C4BD92319F9B77700F2EB8A /* Easy_ScoresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BD92219F9B77700F2EB8A /* Easy_ScoresTests.swift */; };
+		3C77203619F9C259002CAF99 /* libPods-Easy Scores Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C77203519F9C259002CAF99 /* libPods-Easy Scores Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,19 +25,128 @@
 			remoteGlobalIDString = 3C4BD90619F9B77700F2EB8A;
 			remoteInfo = "Easy Scores";
 		};
+		3C77202C19F9C23C002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77202519F9C23C002CAF99 /* Sleipnir.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 46718B56194B6A2C006E8A18;
+			remoteInfo = Sleipnir;
+		};
+		3C77202E19F9C23C002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77202519F9C23C002CAF99 /* Sleipnir.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4640EB84196942AF00AE5952;
+			remoteInfo = "Sleipnir-iOS";
+		};
+		3C77203019F9C23C002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77202519F9C23C002CAF99 /* Sleipnir.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4640EBB51969440500AE5952;
+			remoteInfo = "Sleipnir-OSX";
+		};
+		3C77203219F9C23C002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77202519F9C23C002CAF99 /* Sleipnir.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 314AE5C1196D78DA00CA7ED7;
+			remoteInfo = Spec;
+		};
+		3C77205419F9C465002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77204D19F9C464002CAF99 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F1A74291940169200FFFC47;
+			remoteInfo = "Nimble-iOS";
+		};
+		3C77205619F9C465002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77204D19F9C464002CAF99 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F1A74341940169200FFFC47;
+			remoteInfo = "Nimble-iOSTests";
+		};
+		3C77205819F9C465002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77204D19F9C464002CAF99 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F925EAD195C0D6300ED456B;
+			remoteInfo = "Nimble-OSX";
+		};
+		3C77205A19F9C465002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77204D19F9C464002CAF99 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F925EB7195C0D6300ED456B;
+			remoteInfo = "Nimble-OSXTests";
+		};
+		3C77206419F9C491002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77205C19F9C491002CAF99 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DAEB6B8E1943873100289F44;
+			remoteInfo = Quick;
+		};
+		3C77206619F9C491002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77205C19F9C491002CAF99 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DAEB6B991943873100289F44;
+			remoteInfo = QuickTests;
+		};
+		3C77206819F9C491002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77205C19F9C491002CAF99 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A5D117C19473F2100F6D13D;
+			remoteInfo = "Quick-iOS";
+		};
+		3C77206A19F9C491002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77205C19F9C491002CAF99 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A5D118619473F2100F6D13D;
+			remoteInfo = "Quick-iOSTests";
+		};
+		3C77206C19F9C4A4002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77205C19F9C491002CAF99 /* Quick.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DAEB6B8D1943873100289F44;
+			remoteInfo = Quick;
+		};
+		3C77206E19F9C4A9002CAF99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C77204D19F9C464002CAF99 /* Nimble.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F1A74281940169200FFFC47;
+			remoteInfo = "Nimble-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09F8E47A287FBD992B65C5FB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		0AAB98725772FAB10CAFCBBC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2302B3BF78EE59DFCC6A91A3 /* Pods-Easy Scores Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Scores Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Easy Scores Tests/Pods-Easy Scores Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3C4BD90719F9B77700F2EB8A /* Easy Scores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Scores.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4BD90B19F9B77700F2EB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C4BD90C19F9B77700F2EB8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C4BD90E19F9B77700F2EB8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3C4BD90E19F9B77700F2EB8A /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		3C4BD91119F9B77700F2EB8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C4BD91319F9B77700F2EB8A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3C4BD91619F9B77700F2EB8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3C4BD91C19F9B77700F2EB8A /* Easy ScoresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Easy ScoresTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C4BD91C19F9B77700F2EB8A /* Easy Scores Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Easy Scores Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4BD92119F9B77700F2EB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C4BD92219F9B77700F2EB8A /* Easy_ScoresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Easy_ScoresTests.swift; sourceTree = "<group>"; };
+		3C77202319F9C1FC002CAF99 /* Sleipnir.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = Sleipnir.xcworkspace; path = ThirdParty/Sleipnir/Sleipnir.xcworkspace; sourceTree = "<group>"; };
+		3C77202519F9C23C002CAF99 /* Sleipnir.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sleipnir.xcodeproj; path = ThirdParty/Sleipnir/Sleipnir/Sleipnir.xcodeproj; sourceTree = "<group>"; };
+		3C77203519F9C259002CAF99 /* libPods-Easy Scores Tests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Easy Scores Tests.a"; path = "Pods/build/Debug-iphoneos/libPods-Easy Scores Tests.a"; sourceTree = "<group>"; };
+		3C77204D19F9C464002CAF99 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = ThirdParty/Nimble/Nimble.xcodeproj; sourceTree = SOURCE_ROOT; };
+		3C77205C19F9C491002CAF99 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = ThirdParty/Quick/Quick/Quick.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6E174F325C595EF2D0EB3924 /* Pods-Easy Scores Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Scores Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easy Scores Tests/Pods-Easy Scores Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C5043889BFEA79D0767205F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EE97C2C7EC046BD8C0238685 /* libPods-Easy Scores Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easy Scores Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				010ED3BD9FD233F830CFAF34 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C77203619F9C259002CAF99 /* libPods-Easy Scores Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +175,8 @@
 				3C4BD90919F9B77700F2EB8A /* Easy Scores */,
 				3C4BD91F19F9B77700F2EB8A /* Easy ScoresTests */,
 				3C4BD90819F9B77700F2EB8A /* Products */,
+				82189E0D289E9FA67A359801 /* Pods */,
+				863B00835980C00BCC175B7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				3C4BD90719F9B77700F2EB8A /* Easy Scores.app */,
-				3C4BD91C19F9B77700F2EB8A /* Easy ScoresTests.xctest */,
+				3C4BD91C19F9B77700F2EB8A /* Easy Scores Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				3C4BD90C19F9B77700F2EB8A /* AppDelegate.swift */,
-				3C4BD90E19F9B77700F2EB8A /* ViewController.swift */,
+				3C4BD90E19F9B77700F2EB8A /* ScoresViewController.swift */,
 				3C4BD91019F9B77700F2EB8A /* Main.storyboard */,
 				3C4BD91319F9B77700F2EB8A /* Images.xcassets */,
 				3C4BD91519F9B77700F2EB8A /* LaunchScreen.xib */,
@@ -98,6 +213,8 @@
 		3C4BD91F19F9B77700F2EB8A /* Easy ScoresTests */ = {
 			isa = PBXGroup;
 			children = (
+				3C77205C19F9C491002CAF99 /* Quick.xcodeproj */,
+				3C77204D19F9C464002CAF99 /* Nimble.xcodeproj */,
 				3C4BD92219F9B77700F2EB8A /* Easy_ScoresTests.swift */,
 				3C4BD92019F9B77700F2EB8A /* Supporting Files */,
 			);
@@ -112,6 +229,62 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3C77202619F9C23C002CAF99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C77202D19F9C23C002CAF99 /* Sleipnir */,
+				3C77202F19F9C23C002CAF99 /* Sleipnir.framework */,
+				3C77203119F9C23C002CAF99 /* Sleipnir.framework */,
+				3C77203319F9C23C002CAF99 /* Spec */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C77204E19F9C464002CAF99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C77205519F9C465002CAF99 /* Nimble.framework */,
+				3C77205719F9C465002CAF99 /* NimbleTests.xctest */,
+				3C77205919F9C465002CAF99 /* Nimble.framework */,
+				3C77205B19F9C465002CAF99 /* Nimble-OSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C77205D19F9C491002CAF99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C77206519F9C491002CAF99 /* Quick.framework */,
+				3C77206719F9C491002CAF99 /* QuickTests.xctest */,
+				3C77206919F9C491002CAF99 /* Quick.framework */,
+				3C77206B19F9C491002CAF99 /* Quick-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82189E0D289E9FA67A359801 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E174F325C595EF2D0EB3924 /* Pods-Easy Scores Tests.debug.xcconfig */,
+				2302B3BF78EE59DFCC6A91A3 /* Pods-Easy Scores Tests.release.xcconfig */,
+				C5043889BFEA79D0767205F6 /* Pods.debug.xcconfig */,
+				09F8E47A287FBD992B65C5FB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		863B00835980C00BCC175B7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C77203519F9C259002CAF99 /* libPods-Easy Scores Tests.a */,
+				3C77202519F9C23C002CAF99 /* Sleipnir.xcodeproj */,
+				3C77202319F9C1FC002CAF99 /* Sleipnir.xcworkspace */,
+				EE97C2C7EC046BD8C0238685 /* libPods-Easy Scores Tests.a */,
+				0AAB98725772FAB10CAFCBBC /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C4BD92619F9B77700F2EB8A /* Build configuration list for PBXNativeTarget "Easy Scores" */;
 			buildPhases = (
+				92CA4B537A21875CC542E413 /* Check Pods Manifest.lock */,
 				3C4BD90319F9B77700F2EB8A /* Sources */,
 				3C4BD90419F9B77700F2EB8A /* Frameworks */,
 				3C4BD90519F9B77700F2EB8A /* Resources */,
+				D7CCA0576E982186E826E504 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,22 +307,26 @@
 			productReference = 3C4BD90719F9B77700F2EB8A /* Easy Scores.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3C4BD91B19F9B77700F2EB8A /* Easy ScoresTests */ = {
+		3C4BD91B19F9B77700F2EB8A /* Easy Scores Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C4BD92919F9B77700F2EB8A /* Build configuration list for PBXNativeTarget "Easy ScoresTests" */;
+			buildConfigurationList = 3C4BD92919F9B77700F2EB8A /* Build configuration list for PBXNativeTarget "Easy Scores Tests" */;
 			buildPhases = (
+				B5BED96FF81E150360296DEF /* Check Pods Manifest.lock */,
 				3C4BD91819F9B77700F2EB8A /* Sources */,
 				3C4BD91919F9B77700F2EB8A /* Frameworks */,
 				3C4BD91A19F9B77700F2EB8A /* Resources */,
+				42704B24DDDFF3AD7241F2CA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3C77206F19F9C4A9002CAF99 /* PBXTargetDependency */,
+				3C77206D19F9C4A4002CAF99 /* PBXTargetDependency */,
 				3C4BD91E19F9B77700F2EB8A /* PBXTargetDependency */,
 			);
-			name = "Easy ScoresTests";
+			name = "Easy Scores Tests";
 			productName = "Easy ScoresTests";
-			productReference = 3C4BD91C19F9B77700F2EB8A /* Easy ScoresTests.xctest */;
+			productReference = 3C4BD91C19F9B77700F2EB8A /* Easy Scores Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -179,13 +358,114 @@
 			mainGroup = 3C4BD8FE19F9B77700F2EB8A;
 			productRefGroup = 3C4BD90819F9B77700F2EB8A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3C77204E19F9C464002CAF99 /* Products */;
+					ProjectRef = 3C77204D19F9C464002CAF99 /* Nimble.xcodeproj */;
+				},
+				{
+					ProductGroup = 3C77205D19F9C491002CAF99 /* Products */;
+					ProjectRef = 3C77205C19F9C491002CAF99 /* Quick.xcodeproj */;
+				},
+				{
+					ProductGroup = 3C77202619F9C23C002CAF99 /* Products */;
+					ProjectRef = 3C77202519F9C23C002CAF99 /* Sleipnir.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3C4BD90619F9B77700F2EB8A /* Easy Scores */,
-				3C4BD91B19F9B77700F2EB8A /* Easy ScoresTests */,
+				3C4BD91B19F9B77700F2EB8A /* Easy Scores Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3C77202D19F9C23C002CAF99 /* Sleipnir */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Sleipnir;
+			remoteRef = 3C77202C19F9C23C002CAF99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C77202F19F9C23C002CAF99 /* Sleipnir.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Sleipnir.framework;
+			remoteRef = 3C77202E19F9C23C002CAF99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C77203119F9C23C002CAF99 /* Sleipnir.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Sleipnir.framework;
+			remoteRef = 3C77203019F9C23C002CAF99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C77203319F9C23C002CAF99 /* Spec */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Spec;
+			remoteRef = 3C77203219F9C23C002CAF99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C77205519F9C465002CAF99 /* Nimble.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nimble.framework;
+			remoteRef = 3C77205419F9C465002CAF99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C77205719F9C465002CAF99 /* NimbleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NimbleTests.xctest;
+			remoteRef = 3C77205619F9C465002CAF99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C77205919F9C465002CAF99 /* Nimble.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nimble.framework;
+			remoteRef = 3C77205819F9C465002CAF99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C77205B19F9C465002CAF99 /* Nimble-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nimble-OSXTests.xctest";
+			remoteRef = 3C77205A19F9C465002CAF99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C77206519F9C491002CAF99 /* Quick.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Quick.framework;
+			remoteRef = 3C77206419F9C491002CAF99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C77206719F9C491002CAF99 /* QuickTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QuickTests.xctest;
+			remoteRef = 3C77206619F9C491002CAF99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C77206919F9C491002CAF99 /* Quick.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Quick.framework;
+			remoteRef = 3C77206819F9C491002CAF99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C77206B19F9C491002CAF99 /* Quick-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Quick-iOSTests.xctest";
+			remoteRef = 3C77206A19F9C491002CAF99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3C4BD90519F9B77700F2EB8A /* Resources */ = {
@@ -207,12 +487,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42704B24DDDFF3AD7241F2CA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Easy Scores Tests/Pods-Easy Scores Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92CA4B537A21875CC542E413 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5BED96FF81E150360296DEF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D7CCA0576E982186E826E504 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3C4BD90319F9B77700F2EB8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C4BD90F19F9B77700F2EB8A /* ViewController.swift in Sources */,
+				3C4BD90F19F9B77700F2EB8A /* ScoresViewController.swift in Sources */,
 				3C4BD90D19F9B77700F2EB8A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +575,16 @@
 			isa = PBXTargetDependency;
 			target = 3C4BD90619F9B77700F2EB8A /* Easy Scores */;
 			targetProxy = 3C4BD91D19F9B77700F2EB8A /* PBXContainerItemProxy */;
+		};
+		3C77206D19F9C4A4002CAF99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Quick;
+			targetProxy = 3C77206C19F9C4A4002CAF99 /* PBXContainerItemProxy */;
+		};
+		3C77206F19F9C4A9002CAF99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Nimble-iOS";
+			targetProxy = 3C77206E19F9C4A9002CAF99 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -334,6 +687,7 @@
 		};
 		3C4BD92719F9B77700F2EB8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5043889BFEA79D0767205F6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Easy Scores/Info.plist";
@@ -344,6 +698,7 @@
 		};
 		3C4BD92819F9B77700F2EB8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09F8E47A287FBD992B65C5FB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Easy Scores/Info.plist";
@@ -354,6 +709,7 @@
 		};
 		3C4BD92A19F9B77700F2EB8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E174F325C595EF2D0EB3924 /* Pods-Easy Scores Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -366,6 +722,10 @@
 				);
 				INFOPLIST_FILE = "Easy ScoresTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy Scores.app/Easy Scores";
 			};
@@ -373,6 +733,7 @@
 		};
 		3C4BD92B19F9B77700F2EB8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2302B3BF78EE59DFCC6A91A3 /* Pods-Easy Scores Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -381,6 +742,10 @@
 				);
 				INFOPLIST_FILE = "Easy ScoresTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy Scores.app/Easy Scores";
 			};
@@ -405,14 +770,16 @@
 				3C4BD92819F9B77700F2EB8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		3C4BD92919F9B77700F2EB8A /* Build configuration list for PBXNativeTarget "Easy ScoresTests" */ = {
+		3C4BD92919F9B77700F2EB8A /* Build configuration list for PBXNativeTarget "Easy Scores Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C4BD92A19F9B77700F2EB8A /* Debug */,
 				3C4BD92B19F9B77700F2EB8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

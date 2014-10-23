@@ -1,22 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Scores View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ScoresViewController" customModule="Easy_Scores" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsn-lE-UOH">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Clear Players" id="J6h-HU-dO3"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8XM-Vx-m4m"/>
+                                    <barButtonItem title="Reset Scores" id="jYj-Wm-BVQ"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wGC-ex-sRm">
+                                <rect key="frame" x="0.0" y="110" width="600" height="446"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add player" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n3a-ef-udg">
+                                <rect key="frame" x="16" y="72" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n3a-ef-udg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="24N-kc-DDf"/>
+                            <constraint firstAttribute="trailing" secondItem="wsn-lE-UOH" secondAttribute="trailing" id="6QY-ji-OMT"/>
+                            <constraint firstItem="n3a-ef-udg" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="FJQ-g9-qOp"/>
+                            <constraint firstItem="wsn-lE-UOH" firstAttribute="centerX" secondItem="n3a-ef-udg" secondAttribute="centerX" id="Hai-dP-2bU"/>
+                            <constraint firstItem="wsn-lE-UOH" firstAttribute="top" secondItem="wGC-ex-sRm" secondAttribute="bottom" id="JJ6-2Q-1G2"/>
+                            <constraint firstItem="wsn-lE-UOH" firstAttribute="leading" secondItem="wGC-ex-sRm" secondAttribute="leading" id="L67-yu-YJJ"/>
+                            <constraint firstAttribute="trailing" secondItem="wGC-ex-sRm" secondAttribute="trailing" id="MaE-4q-dKr"/>
+                            <constraint firstItem="n3a-ef-udg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="R1z-lF-NMp"/>
+                            <constraint firstItem="wsn-lE-UOH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="RK6-on-Sv8"/>
+                            <constraint firstItem="n3a-ef-udg" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="dfs-mj-A6v"/>
+                            <constraint firstItem="wGC-ex-sRm" firstAttribute="top" secondItem="n3a-ef-udg" secondAttribute="bottom" constant="8" id="fnk-yy-quk"/>
+                            <constraint firstItem="n3a-ef-udg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="jvT-qh-mT0"/>
+                            <constraint firstItem="wsn-lE-UOH" firstAttribute="trailing" secondItem="wGC-ex-sRm" secondAttribute="trailing" id="peK-Kl-tRH"/>
+                            <constraint firstItem="wsn-lE-UOH" firstAttribute="top" secondItem="wGC-ex-sRm" secondAttribute="bottom" id="pyK-UE-Lir"/>
+                            <constraint firstItem="wsn-lE-UOH" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="tck-be-CDX"/>
+                        </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="playersTableView" destination="wGC-ex-sRm" id="MZK-Is-o0E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

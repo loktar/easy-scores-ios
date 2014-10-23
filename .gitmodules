@@ -1,0 +1,9 @@
+[submodule "ThirdParty/Sleipnir"]
+	path = ThirdParty/Sleipnir
+	url = https://github.com/railsware/sleipnir
+[submodule "ThirdParty/Quick"]
+	path = ThirdParty/Quick
+	url = git@loktar.github.com:Quick/Quick.git
+[submodule "ThirdParty/Nimble"]
+	path = ThirdParty/Nimble
+	url = git@loktar.github.com:Quick/Nimble.git
