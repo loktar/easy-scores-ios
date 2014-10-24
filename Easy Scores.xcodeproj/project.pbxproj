@@ -15,6 +15,9 @@
 		3C4BD91719F9B77700F2EB8A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4BD91519F9B77700F2EB8A /* LaunchScreen.xib */; };
 		3C4BD92319F9B77700F2EB8A /* Easy_ScoresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4BD92219F9B77700F2EB8A /* Easy_ScoresTests.swift */; };
 		3C77203619F9C259002CAF99 /* libPods-Easy Scores Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C77203519F9C259002CAF99 /* libPods-Easy Scores Tests.a */; };
+		3C7720A219F9CA41002CAF99 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7720A119F9CA41002CAF99 /* CoreDataHelper.swift */; };
+		3C7720A419F9CAA9002CAF99 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7720A319F9CAA9002CAF99 /* CoreData.framework */; };
+		3C7720A719F9CACE002CAF99 /* EasyScores.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C7720A519F9CACE002CAF99 /* EasyScores.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +147,9 @@
 		3C77203519F9C259002CAF99 /* libPods-Easy Scores Tests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Easy Scores Tests.a"; path = "Pods/build/Debug-iphoneos/libPods-Easy Scores Tests.a"; sourceTree = "<group>"; };
 		3C77204D19F9C464002CAF99 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = ThirdParty/Nimble/Nimble.xcodeproj; sourceTree = SOURCE_ROOT; };
 		3C77205C19F9C491002CAF99 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = ThirdParty/Quick/Quick/Quick.xcodeproj; sourceTree = SOURCE_ROOT; };
+		3C7720A119F9CA41002CAF99 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		3C7720A319F9CAA9002CAF99 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3C7720A619F9CACE002CAF99 /* EasyScores.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EasyScores.xcdatamodel; sourceTree = "<group>"; };
 		6E174F325C595EF2D0EB3924 /* Pods-Easy Scores Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Scores Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easy Scores Tests/Pods-Easy Scores Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5043889BFEA79D0767205F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EE97C2C7EC046BD8C0238685 /* libPods-Easy Scores Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easy Scores Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7720A419F9CAA9002CAF99 /* CoreData.framework in Frameworks */,
 				3C77203619F9C259002CAF99 /* libPods-Easy Scores Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,11 +200,13 @@
 			isa = PBXGroup;
 			children = (
 				3C4BD90C19F9B77700F2EB8A /* AppDelegate.swift */,
+				3C7720A119F9CA41002CAF99 /* CoreDataHelper.swift */,
 				3C4BD90E19F9B77700F2EB8A /* ScoresViewController.swift */,
 				3C4BD91019F9B77700F2EB8A /* Main.storyboard */,
 				3C4BD91319F9B77700F2EB8A /* Images.xcassets */,
 				3C4BD91519F9B77700F2EB8A /* LaunchScreen.xib */,
 				3C4BD90A19F9B77700F2EB8A /* Supporting Files */,
+				3C7720A519F9CACE002CAF99 /* EasyScores.xcdatamodeld */,
 			);
 			path = "Easy Scores";
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 		863B00835980C00BCC175B7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C7720A319F9CAA9002CAF99 /* CoreData.framework */,
 				3C77203519F9C259002CAF99 /* libPods-Easy Scores Tests.a */,
 				3C77202519F9C23C002CAF99 /* Sleipnir.xcodeproj */,
 				3C77202319F9C1FC002CAF99 /* Sleipnir.xcworkspace */,
@@ -555,6 +565,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7720A719F9CACE002CAF99 /* EasyScores.xcdatamodeld in Sources */,
+				3C7720A219F9CA41002CAF99 /* CoreDataHelper.swift in Sources */,
 				3C4BD90F19F9B77700F2EB8A /* ScoresViewController.swift in Sources */,
 				3C4BD90D19F9B77700F2EB8A /* AppDelegate.swift in Sources */,
 			);
@@ -782,6 +794,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3C7720A519F9CACE002CAF99 /* EasyScores.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3C7720A619F9CACE002CAF99 /* EasyScores.xcdatamodel */,
+			);
+			currentVersion = 3C7720A619F9CACE002CAF99 /* EasyScores.xcdatamodel */;
+			path = EasyScores.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3C4BD8FF19F9B77700F2EB8A /* Project object */;
 }

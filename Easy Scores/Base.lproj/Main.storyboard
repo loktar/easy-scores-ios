@@ -28,6 +28,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wGC-ex-sRm">
                                 <rect key="frame" x="0.0" y="110" width="600" height="446"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="NyY-3a-7ZK"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="kkD-C3-xpt"/>
+                                </connections>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add player" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n3a-ef-udg">
                                 <rect key="frame" x="16" y="72" width="568" height="30"/>
