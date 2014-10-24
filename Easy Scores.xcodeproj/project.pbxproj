@@ -18,6 +18,7 @@
 		3C7720A219F9CA41002CAF99 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7720A119F9CA41002CAF99 /* CoreDataHelper.swift */; };
 		3C7720A419F9CAA9002CAF99 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7720A319F9CAA9002CAF99 /* CoreData.framework */; };
 		3C7720A719F9CACE002CAF99 /* EasyScores.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C7720A519F9CACE002CAF99 /* EasyScores.xcdatamodeld */; };
+		3C7720A919FAF745002CAF99 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7720A819FAF745002CAF99 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,7 @@
 		3C7720A119F9CA41002CAF99 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		3C7720A319F9CAA9002CAF99 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3C7720A619F9CACE002CAF99 /* EasyScores.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EasyScores.xcdatamodel; sourceTree = "<group>"; };
+		3C7720A819FAF745002CAF99 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		6E174F325C595EF2D0EB3924 /* Pods-Easy Scores Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Scores Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easy Scores Tests/Pods-Easy Scores Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5043889BFEA79D0767205F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EE97C2C7EC046BD8C0238685 /* libPods-Easy Scores Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easy Scores Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +209,7 @@
 				3C4BD91519F9B77700F2EB8A /* LaunchScreen.xib */,
 				3C4BD90A19F9B77700F2EB8A /* Supporting Files */,
 				3C7720A519F9CACE002CAF99 /* EasyScores.xcdatamodeld */,
+				3C7720A819FAF745002CAF99 /* Player.swift */,
 			);
 			path = "Easy Scores";
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				3C7720A719F9CACE002CAF99 /* EasyScores.xcdatamodeld in Sources */,
 				3C7720A219F9CA41002CAF99 /* CoreDataHelper.swift in Sources */,
 				3C4BD90F19F9B77700F2EB8A /* ScoresViewController.swift in Sources */,
+				3C7720A919FAF745002CAF99 /* Player.swift in Sources */,
 				3C4BD90D19F9B77700F2EB8A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
