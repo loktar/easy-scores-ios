@@ -18,6 +18,8 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.playersTableView.registerClass(PlayerTableViewCell.self, forCellReuseIdentifier: "PlayerCell")
+        
         var e: NSError? = nil
         if !self.fetchedResultsController.performFetch(&e) {
             NSLog("error fetching players: \(e)")

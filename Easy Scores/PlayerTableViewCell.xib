@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kk2-IK-PWi" customClass="PlayerTableViewCell" customModule="Easy_Scores" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kk2-IK-PWi" id="bvu-AC-C5c">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Player Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVh-5d-LfH" userLabel="Player Name">
+                        <rect key="frame" x="8" y="11" width="165" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2R9-L7-DNw" userLabel="Score">
+                        <rect key="frame" x="283" y="11" width="29" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stepper opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6FD-1i-FPt">
+                        <rect key="frame" x="181" y="7" width="94" height="29"/>
+                    </stepper>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="6FD-1i-FPt" secondAttribute="centerY" id="7gE-Dl-o0p"/>
+                    <constraint firstItem="6FD-1i-FPt" firstAttribute="leading" secondItem="OVh-5d-LfH" secondAttribute="trailing" constant="8" id="a5T-j8-W42"/>
+                    <constraint firstAttribute="centerY" secondItem="OVh-5d-LfH" secondAttribute="centerY" id="cLb-R0-EA8"/>
+                    <constraint firstItem="2R9-L7-DNw" firstAttribute="leading" secondItem="6FD-1i-FPt" secondAttribute="trailing" constant="8" id="lTU-9k-Kn4"/>
+                    <constraint firstAttribute="centerY" secondItem="2R9-L7-DNw" secondAttribute="centerY" id="lXX-SA-J7r"/>
+                    <constraint firstItem="OVh-5d-LfH" firstAttribute="leading" secondItem="bvu-AC-C5c" secondAttribute="leadingMargin" id="ll1-gj-Jpt"/>
+                    <constraint firstItem="2R9-L7-DNw" firstAttribute="trailing" secondItem="bvu-AC-C5c" secondAttribute="trailingMargin" id="yaB-ZC-38d"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="672" y="382"/>
+        </tableViewCell>
+    </objects>
+</document>
