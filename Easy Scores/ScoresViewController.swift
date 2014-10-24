@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ScoresViewController.swift
 //  Easy Scores
 //
 //  Created by Ian Fisher on 10/23/14.
@@ -9,7 +9,7 @@
 import CoreData
 import UIKit
 
-class ScoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ScoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
 
     @IBOutlet var playersTableView: UITableView!
 
@@ -39,10 +39,14 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
             cell = UITableViewCell()
         }
         
-        let player = self.fetchedResultsController.objectAtIndexPath(indexPath) as Player
-        cell?.textLabel.text = player.name
+        self.configureCell(cell, indexPath: indexPath)
         
         return cell!
+    }
+    
+    func configureCell(cell: UITableViewCell?, indexPath: NSIndexPath) {
+        let player = self.fetchedResultsController.objectAtIndexPath(indexPath) as Player
+        cell?.textLabel.text = player.name
     }
     
     @IBAction func addPlayerFromTextField(sender: UITextField) {
@@ -68,11 +72,41 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
             fetchRequest.fetchBatchSize = 20
             fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
             
-            return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+            let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+            frc.delegate = self
+            return frc
         }
     
         NSLog("Could not create managed object context; exiting")
         exit(1)
     }()
+    
+    // MARK: Fetched Results Controller Delegate
+    
+    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+        self.playersTableView.beginUpdates()
+    }
+    
+    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+        let tv = self.playersTableView
+        
+        switch (type) {
+        case .Insert:
+            tv.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
+        case .Delete:
+            tv.deleteRowsAtIndexPaths([newIndexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
+        case .Update:
+            self.configureCell(tv.cellForRowAtIndexPath(indexPath!), indexPath: indexPath!)
+        case .Move:
+            tv.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
+            tv.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
+        default:
+            break
+        }
+    }
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        self.playersTableView.endUpdates()
+    }
 }
 
