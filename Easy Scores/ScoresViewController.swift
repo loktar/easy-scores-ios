@@ -72,6 +72,25 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
+    @IBAction func clearPlayers(sender: UIBarButtonItem) {
+        if let moc = self.coreDataHelper.managedObjectContext {
+            let entity = NSEntityDescription.entityForName("Player", inManagedObjectContext: moc)
+
+            let fetchRequest = NSFetchRequest()
+            fetchRequest.entity = entity
+            fetchRequest.includesPropertyValues = false
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: true)]
+            
+            var e : NSError? = nil
+            let fetchedObjects = moc.executeFetchRequest(fetchRequest, error: &e)
+            if let os = fetchedObjects {
+                for o in os {
+                    moc.deleteObject(o as NSManagedObject)
+                }
+            }
+        }
+    }
+    
     lazy var fetchedResultsController: NSFetchedResultsController = {
         if let moc = self.coreDataHelper.managedObjectContext {
             let entity = NSEntityDescription.entityForName("Player", inManagedObjectContext: moc)
@@ -103,7 +122,7 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
         case .Insert:
             tv.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
         case .Delete:
-            tv.deleteRowsAtIndexPaths([newIndexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
+            tv.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
         case .Update:
             self.configureCell(tv.cellForRowAtIndexPath(indexPath!), indexPath: indexPath!)
         case .Move:
