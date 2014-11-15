@@ -73,6 +73,7 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     @IBAction func clearPlayers(sender: UIBarButtonItem) {
+        // TODO confirm delete
         if let moc = self.coreDataHelper.managedObjectContext {
             let entity = NSEntityDescription.entityForName("Player", inManagedObjectContext: moc)
 
