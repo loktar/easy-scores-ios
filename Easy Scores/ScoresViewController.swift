@@ -52,10 +52,17 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     @IBAction func addPlayerFromTextField(sender: UITextField) {
+        let name = sender.text
+        
+        if name.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0 {
+            return
+        }
+        
         if let moc = self.coreDataHelper.managedObjectContext {
             let player = NSEntityDescription.insertNewObjectForEntityForName("Player", inManagedObjectContext: moc) as Player
             player.name = sender.text
             player.score = 0
+            player.createdAt = NSDate()
 
             var e: NSError?
             moc.save(&e)
@@ -72,7 +79,7 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
             let fetchRequest = NSFetchRequest()
             fetchRequest.entity = entity
             fetchRequest.fetchBatchSize = 20
-            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: true)]
             
             let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
             frc.delegate = self

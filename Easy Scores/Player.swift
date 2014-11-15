@@ -13,5 +13,6 @@ class Player: NSManagedObject {
 
     @NSManaged var name: String
     @NSManaged var score: NSNumber
+    @NSManaged var createdAt: NSDate
 
 }
