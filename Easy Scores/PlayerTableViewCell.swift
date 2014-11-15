@@ -11,14 +11,21 @@ import UIKit
 class PlayerTableViewCell: UITableViewCell {
     
     func configureForPlayer(player: Player) {
-        self.nameTextField.text = player.name
+        self.nameLabel.text = player.name
+        self.scoreLabel.text = player.score.stringValue
     }
     
     // MARK: Subviews
     
-    lazy var nameTextField: UITextField = {
-        var tag: Int = 1
-        return self.contentView.viewWithTag(tag) as UITextField
+    lazy var nameLabel: UILabel = {
+        return self.contentView.viewWithTag(1) as UILabel
     }()
    
+    lazy var stepper: UIStepper = {
+        return self.contentView.viewWithTag(2) as UIStepper
+    }()
+    
+    lazy var scoreLabel: UILabel = {
+        return self.contentView.viewWithTag(3) as UILabel
+    }()
 }

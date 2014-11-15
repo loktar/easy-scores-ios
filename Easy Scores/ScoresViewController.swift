@@ -13,12 +13,14 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
 
     @IBOutlet var playersTableView: UITableView!
 
+    let kPlayerCellReuseIdentifier = "kPlayerCellReuseIdentifier"
+    
     let coreDataHelper = CoreDataHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.playersTableView.registerClass(PlayerTableViewCell.self, forCellReuseIdentifier: "PlayerCell")
+        self.playersTableView.registerNib(UINib(nibName: "PlayerTableViewCell", bundle: nil), forCellReuseIdentifier: kPlayerCellReuseIdentifier)
         
         var e: NSError? = nil
         if !self.fetchedResultsController.performFetch(&e) {
@@ -34,13 +36,7 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let reuseId = "PlayerCell"
-        
-        var cell = tableView.dequeueReusableCellWithIdentifier(reuseId) as? UITableViewCell
-        if cell == nil {
-            cell = UITableViewCell()
-        }
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier(kPlayerCellReuseIdentifier) as? UITableViewCell
         self.configureCell(cell, indexPath: indexPath)
         
         return cell!
@@ -48,7 +44,9 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     
     func configureCell(cell: UITableViewCell?, indexPath: NSIndexPath) {
         let player = self.fetchedResultsController.objectAtIndexPath(indexPath) as Player
-        cell?.textLabel.text = player.name
+        
+        let playerCell = cell as PlayerTableViewCell
+        playerCell .configureForPlayer(player)
     }
     
     @IBAction func addPlayerFromTextField(sender: UITextField) {
