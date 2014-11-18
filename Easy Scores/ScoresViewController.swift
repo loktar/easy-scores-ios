@@ -16,6 +16,7 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     let kPlayerCellReuseIdentifier = "kPlayerCellReuseIdentifier"
     
     let coreDataHelper = CoreDataHelper()
+    let playerClearer = PlayerClearer()
     let scoreResetter = ScoreResetter()
     
     override func viewDidLoad() {
@@ -74,31 +75,11 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     @IBAction func clearPlayers(sender: UIBarButtonItem) {
-        // TODO confirm delete
-        if let moc = self.coreDataHelper.managedObjectContext {
-            let entity = NSEntityDescription.entityForName("Player", inManagedObjectContext: moc)
-
-            let fetchRequest = NSFetchRequest()
-            fetchRequest.entity = entity
-            fetchRequest.includesPropertyValues = false
-            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: true)]
-            
-            var e : NSError? = nil
-            let fetchedObjects = moc.executeFetchRequest(fetchRequest, error: &e)
-            if let players = fetchedObjects {
-                for player in players {
-                    moc.deleteObject(player as NSManagedObject)
-                }
-                var saveError: NSError? = nil
-                if !moc.save(&saveError) {
-                    NSLog("Error saving context after clearing players: %@", saveError!)
-                }
-            }
-        }
+        self.playerClearer.clearPlayers(self.coreDataHelper.managedObjectContext!, presentingButton: sender)
     }
     
-    @IBAction func resetScores(sender: AnyObject) {
-        self.scoreResetter.resetScores(self.coreDataHelper.managedObjectContext!, presentingButton: sender as UIBarButtonItem, tableView: self.playersTableView)
+    @IBAction func resetScores(sender: UIBarButtonItem) {
+        self.scoreResetter.resetScores(self.coreDataHelper.managedObjectContext!, presentingButton: sender, tableView: self.playersTableView)
     }
     
     lazy var fetchedResultsController: NSFetchedResultsController = {

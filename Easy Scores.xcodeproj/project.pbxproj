@@ -22,6 +22,7 @@
 		3C7720BE19FB0B26002CAF99 /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7720BD19FB0B26002CAF99 /* PlayerTableViewCell.xib */; };
 		3C7720CA19FB0D2A002CAF99 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7720C919FB0D2A002CAF99 /* PlayerTableViewCell.swift */; };
 		3C95A1AA1A1AC5EA0058BBA3 /* ScoreResetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C95A1A91A1AC5EA0058BBA3 /* ScoreResetter.swift */; };
+		3C95A1B61A1AC9E60058BBA3 /* PlayerClearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C95A1B51A1AC9E60058BBA3 /* PlayerClearer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,7 @@
 		3C7720BD19FB0B26002CAF99 /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
 		3C7720C919FB0D2A002CAF99 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		3C95A1A91A1AC5EA0058BBA3 /* ScoreResetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreResetter.swift; sourceTree = "<group>"; };
+		3C95A1B51A1AC9E60058BBA3 /* PlayerClearer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerClearer.swift; sourceTree = "<group>"; };
 		6E174F325C595EF2D0EB3924 /* Pods-Easy Scores Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Scores Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easy Scores Tests/Pods-Easy Scores Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5043889BFEA79D0767205F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EE97C2C7EC046BD8C0238685 /* libPods-Easy Scores Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easy Scores Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +223,7 @@
 				3C7720BD19FB0B26002CAF99 /* PlayerTableViewCell.xib */,
 				3C7720C919FB0D2A002CAF99 /* PlayerTableViewCell.swift */,
 				3C95A1A91A1AC5EA0058BBA3 /* ScoreResetter.swift */,
+				3C95A1B51A1AC9E60058BBA3 /* PlayerClearer.swift */,
 			);
 			path = "Easy Scores";
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C7720CA19FB0D2A002CAF99 /* PlayerTableViewCell.swift in Sources */,
+				3C95A1B61A1AC9E60058BBA3 /* PlayerClearer.swift in Sources */,
 				3C7720A719F9CACE002CAF99 /* EasyScores.xcdatamodeld in Sources */,
 				3C95A1AA1A1AC5EA0058BBA3 /* ScoreResetter.swift in Sources */,
 				3C7720A219F9CA41002CAF99 /* CoreDataHelper.swift in Sources */,
