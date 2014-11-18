@@ -16,6 +16,7 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     let kPlayerCellReuseIdentifier = "kPlayerCellReuseIdentifier"
     
     let coreDataHelper = CoreDataHelper()
+    let scoreResetter = ScoreResetter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,31 +98,7 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     @IBAction func resetScores(sender: AnyObject) {
-        // TODO confirm reset
-        if let moc = self.coreDataHelper.managedObjectContext {
-            let entity = NSEntityDescription.entityForName("Player", inManagedObjectContext: moc)
-            
-            let fetchRequest = NSFetchRequest()
-            fetchRequest.entity = entity
-            fetchRequest.includesPropertyValues = false
-            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: true)]
-            
-            var e : NSError? = nil
-            let fetchedObjects = moc.executeFetchRequest(fetchRequest, error: &e)
-            if let players = fetchedObjects as? Array<Player> {
-                for player in players  {
-                    player.score = 0
-                }
-                var saveError: NSError? = nil
-                if !moc.save(&saveError) {
-                    NSLog("Error saving context after resetting scores: %@", saveError!)
-                }
-            }
-        }
-        
-        for cell in self.playersTableView.visibleCells() as Array<PlayerTableViewCell> {
-            cell.stepper.value = 0
-        }
+        self.scoreResetter.resetScores(self.coreDataHelper.managedObjectContext!, presentingButton: sender as UIBarButtonItem, tableView: self.playersTableView)
     }
     
     lazy var fetchedResultsController: NSFetchedResultsController = {
