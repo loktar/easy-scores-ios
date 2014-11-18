@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import CoreData
 
 class PlayerTableViewCell: UITableViewCell {
+
+    var playerId: NSManagedObjectID?
+    var delegate: PlayerScoreDelegate?
     
     func configureForPlayer(player: Player) {
+        self.playerId = player.objectID
         self.nameLabel.text = player.name
         self.scoreLabel.text = player.score.stringValue
+    }
+    
+    @IBAction func updateScoreFromStepper(sender: AnyObject) {
+        let score = self.stepper.value
+        self.delegate?.scoreDidUpdate(playerId: self.playerId!, score: score)
     }
     
     // MARK: Subviews
@@ -28,4 +38,9 @@ class PlayerTableViewCell: UITableViewCell {
     lazy var scoreLabel: UILabel = {
         return self.contentView.viewWithTag(3) as UILabel
     }()
+}
+
+
+protocol PlayerScoreDelegate {
+    func scoreDidUpdate(#playerId: NSManagedObjectID, score: Double)
 }

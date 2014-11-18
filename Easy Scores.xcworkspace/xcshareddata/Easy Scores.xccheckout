@@ -14,37 +14,37 @@
 		<string>https://github.com/railsware/sleipnir</string>
 		<key>95438028B10BBB846574013D29F154A00556A9D1</key>
 		<string>loktar.github.com:Quick/Nimble.git</string>
-		<key>CC9621558C473D1677DB345C91F12AFD17ED630B</key>
-		<string>loktar.github.com:loktar/easy-scores-ios.git</string>
 		<key>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</key>
 		<string>loktar.github.com:Quick/Quick.git</string>
+		<key>F7A8FC952E4C66098F12E2E8B448CAB0FBA90FD3</key>
+		<string>loktar.github.com:loktar/easy-scores-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Easy Scores.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6FF50F64FF43A6030DA23D917528D8209EA9B926</key>
-		<string>..ThirdParty/Sleipnir/</string>
+		<string>..ThirdParty/Sleipnir</string>
 		<key>95438028B10BBB846574013D29F154A00556A9D1</key>
-		<string>..ThirdParty/Nimble/</string>
-		<key>CC9621558C473D1677DB345C91F12AFD17ED630B</key>
-		<string>..</string>
+		<string>..ThirdParty/Nimble</string>
 		<key>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</key>
-		<string>..ThirdParty/Quick/</string>
+		<string>..ThirdParty/Quick</string>
+		<key>F7A8FC952E4C66098F12E2E8B448CAB0FBA90FD3</key>
+		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>loktar.github.com:loktar/easy-scores-ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>CC9621558C473D1677DB345C91F12AFD17ED630B</string>
+	<string>F7A8FC952E4C66098F12E2E8B448CAB0FBA90FD3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>CC9621558C473D1677DB345C91F12AFD17ED630B</string>
+			<string>F7A8FC952E4C66098F12E2E8B448CAB0FBA90FD3</string>
 			<key>IDESourceControlWCCName</key>
 			<string>easy-scores-ios</string>
 		</dict>

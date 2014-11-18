@@ -9,7 +9,7 @@
 import CoreData
 import UIKit
 
-class ScoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
+class ScoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, PlayerScoreDelegate {
 
     @IBOutlet var playersTableView: UITableView!
 
@@ -36,17 +36,19 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kPlayerCellReuseIdentifier) as? UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(kPlayerCellReuseIdentifier) as PlayerTableViewCell
+        cell.delegate = self
+        
         self.configureCell(cell, indexPath: indexPath)
         
-        return cell!
+        return cell
     }
     
     func configureCell(cell: UITableViewCell?, indexPath: NSIndexPath) {
         let player = self.fetchedResultsController.objectAtIndexPath(indexPath) as Player
         
         let playerCell = cell as PlayerTableViewCell
-        playerCell .configureForPlayer(player)
+        playerCell.configureForPlayer(player)
     }
     
     @IBAction func addPlayerFromTextField(sender: UITextField) {
@@ -82,11 +84,43 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
             
             var e : NSError? = nil
             let fetchedObjects = moc.executeFetchRequest(fetchRequest, error: &e)
-            if let os = fetchedObjects {
-                for o in os {
-                    moc.deleteObject(o as NSManagedObject)
+            if let players = fetchedObjects {
+                for player in players {
+                    moc.deleteObject(player as NSManagedObject)
+                }
+                var saveError: NSError? = nil
+                if !moc.save(&saveError) {
+                    NSLog("Error saving context after clearing players: %@", saveError!)
                 }
             }
+        }
+    }
+    
+    @IBAction func resetScores(sender: AnyObject) {
+        // TODO confirm reset
+        if let moc = self.coreDataHelper.managedObjectContext {
+            let entity = NSEntityDescription.entityForName("Player", inManagedObjectContext: moc)
+            
+            let fetchRequest = NSFetchRequest()
+            fetchRequest.entity = entity
+            fetchRequest.includesPropertyValues = false
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: true)]
+            
+            var e : NSError? = nil
+            let fetchedObjects = moc.executeFetchRequest(fetchRequest, error: &e)
+            if let players = fetchedObjects as? Array<Player> {
+                for player in players  {
+                    player.score = 0
+                }
+                var saveError: NSError? = nil
+                if !moc.save(&saveError) {
+                    NSLog("Error saving context after resetting scores: %@", saveError!)
+                }
+            }
+        }
+        
+        for cell in self.playersTableView.visibleCells() as Array<PlayerTableViewCell> {
+            cell.stepper.value = 0
         }
     }
     
@@ -134,6 +168,21 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         self.playersTableView.endUpdates()
+    }
+    
+    // MARK: PlayerScoreDelegate
+    
+    func scoreDidUpdate(#playerId: NSManagedObjectID, score: Double) {
+        if let moc = self.coreDataHelper.managedObjectContext {
+            var error: NSError?
+            let player = moc.existingObjectWithID(playerId, error: &error) as Player
+            player.score = score
+
+            var saveError: NSError? = nil
+            if !moc.save(&saveError) {
+                NSLog("Error saving context after resetting scores: %@", saveError!)
+            }
+        }
     }
 }
 
