@@ -9,7 +9,7 @@
 import CoreData
 import UIKit
 
-class ScoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, PlayerScoreDelegate {
+class ScoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, UITextFieldDelegate, PlayerScoreDelegate {
 
     @IBOutlet var playersTableView: UITableView!
 
@@ -53,25 +53,28 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
         playerCell.configureForPlayer(player)
     }
     
-    @IBAction func addPlayerFromTextField(sender: UITextField) {
-        let name = sender.text
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        let name = textField.text
         
         if name.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0 {
-            return
+            textField.resignFirstResponder()
+            return true
         }
-        
+
         if let moc = self.coreDataHelper.managedObjectContext {
             let player = NSEntityDescription.insertNewObjectForEntityForName("Player", inManagedObjectContext: moc) as Player
-            player.name = sender.text
+            player.name = name
             player.score = 0
             player.createdAt = NSDate()
-
+            
             var e: NSError?
             moc.save(&e)
             self.playersTableView.reloadData()
             
-            sender.text = ""
+            textField.text = ""
         }
+        
+        return false
     }
     
     @IBAction func clearPlayers(sender: UIBarButtonItem) {
