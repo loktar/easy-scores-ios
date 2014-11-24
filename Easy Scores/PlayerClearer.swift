@@ -17,7 +17,7 @@ class PlayerClearer: NSObject, UIActionSheetDelegate {
     func clearPlayers(managedObjectContext: NSManagedObjectContext, presentingButton: UIBarButtonItem) {
         self.managedObjectContext = managedObjectContext
         
-        let actionSheet = UIActionSheet(title: "Clear all players?", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: "Clear")
+        let actionSheet = UIActionSheet(title: "Clear all players?", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: "Clear Players")
         actionSheet.showFromBarButtonItem(presentingButton, animated: true)
     }
     

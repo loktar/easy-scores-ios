@@ -19,7 +19,7 @@ class ScoreResetter: NSObject, UIActionSheetDelegate {
         self.managedObjectContext = managedObjectContext
         self.tableView = tableView
         
-        let actionSheet = UIActionSheet(title: "Reset all scores?", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: "Reset")
+        let actionSheet = UIActionSheet(title: "Reset all scores?", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: "Reset Scores")
         actionSheet.showFromBarButtonItem(presentingButton, animated: true)
     }
     
