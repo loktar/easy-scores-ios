@@ -24,10 +24,17 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
         
         self.playersTableView.registerNib(UINib(nibName: "PlayerTableViewCell", bundle: nil), forCellReuseIdentifier: kPlayerCellReuseIdentifier)
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: Selector("endEditing"))
+        self.view.addGestureRecognizer(tapGesture)
+        
         var e: NSError? = nil
         if !self.fetchedResultsController.performFetch(&e) {
             NSLog("error fetching players: \(e)")
         }
+    }
+    
+    func endEditing() {
+        self.view.endEditing(true)
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
