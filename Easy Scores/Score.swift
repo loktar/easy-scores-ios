@@ -50,4 +50,8 @@ class Score {
     func minimumScore() -> ScoreValue {
         return 0
     }
+    
+    func isWinning(player: Player) -> Bool {
+        return player.score.doubleValue == self.topScore()
+    }
 }

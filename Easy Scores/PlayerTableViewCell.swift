@@ -14,11 +14,13 @@ class PlayerTableViewCell: UITableViewCell {
     var playerId: NSManagedObjectID?
     var delegate: PlayerScoreDelegate?
     
-    func configureForPlayer(player: Player) {
+    func configureForPlayer(player: Player, isWinning: Bool) {
         self.playerId = player.objectID
         self.nameLabel.text = player.name
         self.stepper.value = player.score.doubleValue
         self.scoreLabel.text = player.score.stringValue
+        
+        self.updateForWinningStatus(isWinning)
     }
     
     func updateForWinningStatus(isWinning: Bool) {

@@ -59,8 +59,10 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     func configureCell(cell: UITableViewCell?, indexPath: NSIndexPath) {
         let player = self.fetchedResultsController.objectAtIndexPath(indexPath) as Player
         
+        let isWinning = self.score.isWinning(player)
+        
         let playerCell = cell as PlayerTableViewCell
-        playerCell.configureForPlayer(player)
+        playerCell.configureForPlayer(player, isWinning: isWinning)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
