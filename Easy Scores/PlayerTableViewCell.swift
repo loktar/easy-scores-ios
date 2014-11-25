@@ -20,6 +20,17 @@ class PlayerTableViewCell: UITableViewCell {
         self.scoreLabel.text = player.score.stringValue
     }
     
+    func updateForWinningStatus(isWinning: Bool) {
+        if isWinning {
+            self.nameLabel.font = UIFont.boldSystemFontOfSize(self.nameLabel.font.pointSize)
+            self.scoreLabel.font = UIFont.boldSystemFontOfSize(self.scoreLabel.font.pointSize)
+        }
+        else {
+            self.nameLabel.font = UIFont.systemFontOfSize(self.nameLabel.font.pointSize)
+            self.scoreLabel.font = UIFont.systemFontOfSize(self.scoreLabel.font.pointSize)
+        }
+    }
+    
     @IBAction func updateScoreFromStepper(sender: AnyObject) {
         let score = self.stepper.value
         self.delegate?.scoreDidUpdate(playerId: self.playerId!, score: score)
@@ -42,5 +53,5 @@ class PlayerTableViewCell: UITableViewCell {
 
 
 protocol PlayerScoreDelegate {
-    func scoreDidUpdate(#playerId: NSManagedObjectID, score: Double)
+    func scoreDidUpdate(#playerId: NSManagedObjectID, score: ScoreValue)
 }

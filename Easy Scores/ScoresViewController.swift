@@ -18,9 +18,12 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     let coreDataHelper = CoreDataHelper()
     let playerClearer = PlayerClearer()
     let scoreResetter = ScoreResetter()
+    var score: Score!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.score = Score(coreDataHelper: self.coreDataHelper)
         
         self.playersTableView.registerNib(UINib(nibName: "PlayerTableViewCell", bundle: nil), forCellReuseIdentifier: kPlayerCellReuseIdentifier)
         
@@ -140,7 +143,7 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
     
     // MARK: PlayerScoreDelegate
     
-    func scoreDidUpdate(#playerId: NSManagedObjectID, score: Double) {
+    func scoreDidUpdate(#playerId: NSManagedObjectID, score: ScoreValue) {
         if let moc = self.coreDataHelper.managedObjectContext {
             var error: NSError?
             let player = moc.existingObjectWithID(playerId, error: &error) as Player
@@ -150,7 +153,20 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
             if !moc.save(&saveError) {
                 NSLog("Error saving context after resetting scores: %@", saveError!)
             }
+            
+            highlightTopScore()
+        }
+    }
+    
+    func highlightTopScore() {
+        let topScore = self.score.topScore()
+        
+        let hasWinner = topScore > self.score.minimumScore()
+        for cell in self.playersTableView.visibleCells() {
+            if let playerCell = cell as? PlayerTableViewCell {
+                let isWinning = hasWinner && playerCell.stepper.value == topScore
+                playerCell.updateForWinningStatus(isWinning)
+            }
         }
     }
 }
-
