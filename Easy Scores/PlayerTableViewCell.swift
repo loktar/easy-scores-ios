@@ -17,6 +17,7 @@ class PlayerTableViewCell: UITableViewCell {
     func configureForPlayer(player: Player) {
         self.playerId = player.objectID
         self.nameLabel.text = player.name
+        self.stepper.value = player.score.doubleValue
         self.scoreLabel.text = player.score.stringValue
     }
     
