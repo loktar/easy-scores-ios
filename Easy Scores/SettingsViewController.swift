@@ -7,9 +7,13 @@
 //
 
 import Foundation
+import CoreData
 import UIKit
 
 class SettingsViewController : UIViewController {
+    
+    let settings = Settings()
+    var managedObjectContext: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
