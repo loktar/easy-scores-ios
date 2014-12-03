@@ -15,7 +15,7 @@ class ScoresViewController: UIViewController, UITableViewDataSource, UITableView
 
     let kPlayerCellReuseIdentifier = "kPlayerCellReuseIdentifier"
     
-    let coreDataHelper = CoreDataHelper()
+    let coreDataHelper = CoreDataHelper.sharedInstance()
     let playerClearer = PlayerClearer()
     let scoreResetter = ScoreResetter()
     var score: Score!

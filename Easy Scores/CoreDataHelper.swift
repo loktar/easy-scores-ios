@@ -10,7 +10,13 @@ import CoreData
 import Foundation
 
 
+let __sharedCoreDataHelper = CoreDataHelper()
+
 class CoreDataHelper {
+    
+    class func sharedInstance() -> CoreDataHelper {
+        return __sharedCoreDataHelper
+    }
 
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.ifisher.Easy-Scores" in the application's documents Application Support directory.

@@ -18,16 +18,15 @@ class Settings: NSManagedObject {
     class func currentSettings(managedObjectContext: NSManagedObjectContext) -> Settings {
         let request = NSFetchRequest(entityName: "Settings")
         request.fetchLimit = 1
-        
+
         let results = managedObjectContext.executeFetchRequest(request, error: nil)
-        return results?.count > 0 ? results!.first as Settings : createSettings(managedObjectContext)
+        if results?.count > 0 {
+           return results!.first as Settings
+        }
+        return createSettings(managedObjectContext)
     }
 
     class func createSettings(managedObjectContext: NSManagedObjectContext) -> Settings {
-        let settings = NSEntityDescription.insertNewObjectForEntityForName("Settings", inManagedObjectContext: managedObjectContext) as Settings
-        settings.startingScore = 0
-        managedObjectContext.save(nil)
-
-        return settings
+        return NSEntityDescription.insertNewObjectForEntityForName("Settings", inManagedObjectContext: managedObjectContext) as Settings
     }
 }
