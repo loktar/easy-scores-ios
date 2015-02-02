@@ -27,6 +27,9 @@
 		3C95A1BA1A2527170058BBA3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C95A1B91A2527170058BBA3 /* SettingsViewController.swift */; };
 		3C95A1BC1A252C090058BBA3 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C95A1BB1A252C090058BBA3 /* DismissSegue.swift */; };
 		3CF91AD41A26786600770CFE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF91AD31A26786600770CFE /* Settings.swift */; };
+		3CF91ADF1A31291C00770CFE /* SettingsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF91ADE1A31291C00770CFE /* SettingsItemView.swift */; };
+		3CF91AED1A31304D00770CFE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF91AEC1A31304D00770CFE /* SettingsView.swift */; };
+		3CF91AEE1A31370800770CFE /* SettingsItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF91AEA1A31297600770CFE /* SettingsItemView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +172,9 @@
 		3C95A1B91A2527170058BBA3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3C95A1BB1A252C090058BBA3 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 		3CF91AD31A26786600770CFE /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		3CF91ADE1A31291C00770CFE /* SettingsItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsItemView.swift; sourceTree = "<group>"; };
+		3CF91AEA1A31297600770CFE /* SettingsItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsItemView.xib; sourceTree = "<group>"; };
+		3CF91AEC1A31304D00770CFE /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6E174F325C595EF2D0EB3924 /* Pods-Easy Scores Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Scores Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Easy Scores Tests/Pods-Easy Scores Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5043889BFEA79D0767205F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EE97C2C7EC046BD8C0238685 /* libPods-Easy Scores Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easy Scores Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +311,7 @@
 			children = (
 				3C4BD90E19F9B77700F2EB8A /* ScoresViewController.swift */,
 				3C95A1B91A2527170058BBA3 /* SettingsViewController.swift */,
+				3CF91AEC1A31304D00770CFE /* SettingsView.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -316,6 +323,8 @@
 				3C4BD91019F9B77700F2EB8A /* Main.storyboard */,
 				3C7720C919FB0D2A002CAF99 /* PlayerTableViewCell.swift */,
 				3C7720BD19FB0B26002CAF99 /* PlayerTableViewCell.xib */,
+				3CF91ADE1A31291C00770CFE /* SettingsItemView.swift */,
+				3CF91AEA1A31297600770CFE /* SettingsItemView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -546,6 +555,7 @@
 				3C7720BE19FB0B26002CAF99 /* PlayerTableViewCell.xib in Resources */,
 				3C4BD91219F9B77700F2EB8A /* Main.storyboard in Resources */,
 				3C4BD91719F9B77700F2EB8A /* LaunchScreen.xib in Resources */,
+				3CF91AEE1A31370800770CFE /* SettingsItemView.xib in Resources */,
 				3C4BD91419F9B77700F2EB8A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,6 +643,8 @@
 				3C95A1B61A1AC9E60058BBA3 /* PlayerClearer.swift in Sources */,
 				3C7720A719F9CACE002CAF99 /* EasyScores.xcdatamodeld in Sources */,
 				3C95A1BA1A2527170058BBA3 /* SettingsViewController.swift in Sources */,
+				3CF91ADF1A31291C00770CFE /* SettingsItemView.swift in Sources */,
+				3CF91AED1A31304D00770CFE /* SettingsView.swift in Sources */,
 				3C95A1AA1A1AC5EA0058BBA3 /* ScoreResetter.swift in Sources */,
 				3C7720A219F9CA41002CAF99 /* CoreDataHelper.swift in Sources */,
 				3C4BD90F19F9B77700F2EB8A /* ScoresViewController.swift in Sources */,

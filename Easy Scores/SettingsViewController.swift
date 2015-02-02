@@ -21,14 +21,26 @@ class SettingsViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let settingsView = SettingsView()
+        settingsView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.view.addSubview(settingsView)
+        
+        let views = [
+            "topGuide": self.topLayoutGuide,
+            "settingsView": settingsView,
+        ]
+
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[topGuide][settingsView]|", options: nil, metrics: nil, views: views))
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[settingsView]|", options: nil, metrics: nil, views: views))
         
         settings = Settings.currentSettings(self.coreDataHelper.managedObjectContext!)
         
-        self.startingScoreTextField.text = settings.startingScore?.stringValue ?? ""
-        self.minimumScoreTextField.text = settings.minimumScore?.stringValue ?? ""
-        self.maximumScoreTextField.text = settings.maximumScore?.stringValue ?? ""
+//        self.startingScoreTextField.text = settings.startingScore?.stringValue ?? ""
+//        self.minimumScoreTextField.text = settings.minimumScore?.stringValue ?? ""
+//        self.maximumScoreTextField.text = settings.maximumScore?.stringValue ?? ""
     }
-
+    
     // TODO only save if passes validation
     // TODO show validation errors inline
     
